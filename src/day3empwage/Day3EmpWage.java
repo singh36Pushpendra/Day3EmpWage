@@ -8,15 +8,20 @@ public class Day3EmpWage {
         
         System.out.println("Welcome to Emp Wage!");
         Random random = new Random();
-        int attendance = random.nextInt(2);
-        int PRESENT = 1;               
+        int attendance = random.nextInt(3);
+        int PART_TIME = 1;
+        int FULL_TIME = 2;
         int WAGE_PER_HOUR = 20;
         int fullDayHour = 0;
         int dailyWage = 0;
         
-        if (attendance == PRESENT) {
+        if (attendance == PART_TIME) {
+            fullDayHour = 4;
+            System.out.println("Employee is Parttime!");
+        }
+        else if (attendance == FULL_TIME) {
             fullDayHour = 8;
-            System.out.println("Employee is Present!");
+            System.out.println("Employee is Fulltime!");
         }
         else
             System.out.println("Employee is Absent!");
